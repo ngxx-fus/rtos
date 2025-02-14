@@ -26,4 +26,3 @@ VD bên trong USB:
     |flash|MCU| <-> (USB prototype)
 ```
 Bên trong MCU có chứa hệ điều hành.
-
