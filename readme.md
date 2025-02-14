@@ -10,20 +10,20 @@ Về cơ bản OS cũng là một phần mềm. Một số hệ điều hành l�
     HW(GPOS)
 ```
 Với các tác vụ đơn giản:
-
+```
     SW
     ---
     HW
-
+```
 Các tác vụ phức tạp hơn:
-
-    SW <-> OS
+```
+    SW <-> OS (aka RTOS/Embedded OS)
     ---------
     HW
-
+```
 VD bên trong USB:
-
+```
     |flash|MCU| <-> (USB prototype)
-
+```
 Bên trong MCU có chứa hệ điều hành.
 
