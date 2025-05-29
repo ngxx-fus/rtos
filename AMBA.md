@@ -1,8 +1,9 @@
 # AMBA
+
 ## Giới thiệu về AMBA
 
-AMBA là viết tắt của Advanced Microcontroller Bus Architecture (Kiến trúc Bus cho Vi điều khiển Nâng cao). Đây là một bộ đặc tả giao thức do Arm định nghĩa. 
-AMBA xác định một tiêu chuẩn truyền thông trên chip nhằm mục đích thiết kế vi điều khiển nhúng hiệu năng cao. 
+AMBA là viết tắt của Advanced Microcontroller Bus Architecture (Kiến trúc Bus cho Vi điều khiển Nâng cao). Đây là một bộ đặc tả giao thức do Arm định nghĩa.
+AMBA xác định một tiêu chuẩn truyền thông trên chip nhằm mục đích thiết kế vi điều khiển nhúng hiệu năng cao.
 
 AMBA cung cấp các giải pháp để kết nối và quản lý các khối chức năng tạo nên một Hệ thống trên chip (SoC). Các ứng dụng của AMBA bao gồm việc phát triển các hệ thống nhúng với một hoặc nhiều bộ xử lý (CPU) hoặc bộ xử lý tín hiệu và nhiều thiết bị ngoại vi.
 
@@ -22,10 +23,10 @@ Hình bên dưới mô tả cấu trúc hệ thống bus của một vi điều 
 
 Trong đó:
 
--   High-performance ARM processor: Bộ xử lý ARM hiệu năng cao, được kết nối trực tiếp với bus hệ thống hiệu năng cao 
--   High-bandwidth on-chip RAM: Bộ nhớ RAM tích hợp trên chip băng thông cao, là khối bộ nhớ nằm trên cùng một chip với bộ xử lý và các thành phần khác của hệ thống AMBA điển hình.
--   High-bandwidth External Memory Interface: Giao diện bộ nhớ ngoài băng thông cao, là một khối chức năng trong hệ thống AMBA được sử dụng để kết nối các thành phần trên chip với bộ nhớ vật lý nằm ngoài chip.
--   DMA (**D**irect **M**emory **A**ccess) bus master:
+- High-performance ARM processor: Bộ xử lý ARM hiệu năng cao, được kết nối trực tiếp với bus hệ thống hiệu năng cao
+- High-bandwidth on-chip RAM: Bộ nhớ RAM tích hợp trên chip băng thông cao, là khối bộ nhớ nằm trên cùng một chip với bộ xử lý và các thành phần khác của hệ thống AMBA điển hình.
+- High-bandwidth External Memory Interface: Giao diện bộ nhớ ngoài băng thông cao, là một khối chức năng trong hệ thống AMBA được sử dụng để kết nối các thành phần trên chip với bộ nhớ vật lý nằm ngoài chip.
+- DMA (**D**irect **M**emory **A**ccess) bus master:
 
 Bộ xử lý tốc độ cao, on-chip RAM, off-chip RAM, DMA bus master được kết nối sử dụng giao thức tốc độ cao AHB/ASB. Trong khi đó các ngoại vi được kết nối thông qua giao thức tốc độ thấp hơn và kết nối với bus tốc độ cao thông qua cầu AHBP2APB hoặc APB2AHB.
 
@@ -36,13 +37,13 @@ Một số thuật ngữ được dùng trong AMBA:
 <table>
     <tr>
         <td>
-            Thuật ngữ 
+            Thuật ngữ
         </td>
         <td>
             Ý nghĩa
         </td>
         <td>
-            Giải thích 
+            Giải thích
         </td>
     </tr>
     <tr>
@@ -191,10 +192,12 @@ Bảng bên dưới mô tả cách các tín hiệu được đặt tên.
             Prefix: <code>P</code>
         </td>
         <td>
-            Tín hiệu APB. 
+            Tín hiệu APB.
         </td>
         <td>
             <code>PCLK</code> - tín hiệu CLK sử dụng bởi APB.
         </td>
     </tr>
 </table>
+
+# AHB - Advanced High-performance Bus
