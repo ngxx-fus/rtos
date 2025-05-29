@@ -28,3 +28,173 @@ Trong đó:
 -   DMA (**D**irect **M**emory **A**ccess) bus master:
 
 Bộ xử lý tốc độ cao, on-chip RAM, off-chip RAM, DMA bus master được kết nối sử dụng giao thức tốc độ cao AHB/ASB. Trong khi đó các ngoại vi được kết nối thông qua giao thức tốc độ thấp hơn và kết nối với bus tốc độ cao thông qua cầu AHBP2APB hoặc APB2AHB.
+
+## Thuật ngữ
+
+Một số thuật ngữ được dùng trong AMBA:
+
+<table>
+    <tr>
+        <td>
+            Thuật ngữ 
+        </td>
+        <td>
+            Ý nghĩa
+        </td>
+        <td>
+            Giải thích 
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Bus cycle
+        </td>
+        <td>
+            Chu kỳ bus
+        </td>
+        <td>
+            Một chu kỳ bus là đơn vị cơ bản của một chu kỳ xung nhịp bus và đối với mục đích mô tả giao thức AMBA AHB hoặc APB, nó được định nghĩa từ posedge --> negedge.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Bus transfer
+        </td>
+        <td>
+            Truyền bus
+        </td>
+        <td>
+            Truyền bus (Bus transfer) Một truyền bus AMBA ASB hoặc AHB là một hoạt động đọc hoặc ghi dữ liệu, có thể mất một hoặc nhiều chu kỳ bus. Truyền bus được kết thúc bằng phản hồi hoàn thành từ slave được chỉ định. Các kích thước truyền được hỗ trợ bởi AMBA ASB bao gồm byte (8-bit), halfword (16-bit) và word (32-bit). AMBA AHB hỗ trợ thêm các truyền dữ liệu rộng hơn, bao gồm truyền 64-bit và 128-bit. Một truyền bus AMBA APB là một hoạt động đọc hoặc ghi dữ liệu, luôn luôn yêu cầu hai chu kỳ bus.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Burst operation
+        </td>
+        <td>
+            Hoạt động truyền liên tục
+        </td>
+        <td>
+            Được định nghĩa là một hoặc nhiều giao dịch dữ liệu, được khởi tạo bởi một bus master, có độ rộng giao dịch nhất quán tới một vùng địa chỉ tăng dần. Bước tăng dần cho mỗi giao dịch được xác định bởi độ rộng của truyền (byte, halfword, word). APB không hỗ trợ truyền liên tục.
+        </td>
+    </tr>
+</table>
+
+# AMBA tín hiệu
+
+Bảng bên dưới mô tả cách các tín hiệu được đặt tên.
+
+<table>
+    <tr>
+        <td>
+            Loại AMBA
+        </td>
+        <td>
+            Đặc diểm
+        </td>
+        <td>
+            Giải thích
+        </td>
+        <td>
+            Ví dụ
+        </td>
+    </tr>
+    <tr>
+        <td>
+            AMBA
+        </td>
+        <td>
+            Tiền tố (prefix) định nghĩa loại bus
+        </td>
+        <td>
+            --
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+    <tr>
+        <td>
+            AMBA
+        </td>
+        <td>
+            Ký tự <code>n</code>
+        </td>
+        <td>
+            Chỉ ra đây là tín hiệu tích mực mức thấp.
+        </td>
+        <td>
+            <code>BnRES</code>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            AHB
+        </td>
+        <td>
+            prefix:<code>H</code>
+        </td>
+        <td>
+            Là một tính hiệu AHB
+        </td>
+        <td>
+            <code>HREADY</code> là tín hiệu báo quá trình truyền dữ liệu hoàn tất, tín hiệu tích cực mức cao.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            ASB
+        </td>
+        <td>
+            Prefix: A
+        </td>
+        <td>
+            là một tín hiệu đơn hướng giữa các bus master ASB và bộ điều phối (arbiter).
+        </td>
+        <td>
+            --
+        </td>
+    </tr>
+    <tr>
+        <td>
+            ASB
+        </td>
+        <td>
+            Prefix: B
+        </td>
+        <td>
+            Là tín hiệu ASB.
+        </td>
+        <td>
+            <code>BnRES</code> là tín hiệu ASB reset, tích cực mức thấp.
+        </td>
+    </tr>
+    <tr>
+        <td>
+            ASB
+        </td>
+        <td>
+            Prefix: D
+        </td>
+        <td>
+        </td>
+            Tín hiệu giải mã (decoder) của ASB.
+        <td>
+            --
+        </td>
+    </tr>
+    <tr>
+        <td>
+            APB
+        </td>
+        <td>
+            Prefix: P
+        </td>
+        <td>
+            Tín hiệu APB. 
+        </td>
+        <td>
+            <code>PCLK</code> - tín hiệu CLK sử dụng bởi APB.
+        </td>
+    </tr>
+</table>
