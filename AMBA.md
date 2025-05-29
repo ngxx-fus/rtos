@@ -80,7 +80,7 @@ Một số thuật ngữ được dùng trong AMBA:
     </tr>
 </table>
 
-# AMBA tín hiệu
+# Qui cách đặt tên tín hiệu AMBA
 
 Bảng bên dưới mô tả cách các tín hiệu được đặt tên.
 
