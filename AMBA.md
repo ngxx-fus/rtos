@@ -146,7 +146,7 @@ Bảng bên dưới mô tả cách các tín hiệu được đặt tên.
             ASB
         </td>
         <td>
-            Prefix: A
+            Prefix: <code>A</code>
         </td>
         <td>
             là một tín hiệu đơn hướng giữa các bus master ASB và bộ điều phối (arbiter).
@@ -160,7 +160,7 @@ Bảng bên dưới mô tả cách các tín hiệu được đặt tên.
             ASB
         </td>
         <td>
-            Prefix: B
+            Prefix: <code>B</code>
         </td>
         <td>
             Là tín hiệu ASB.
@@ -174,7 +174,7 @@ Bảng bên dưới mô tả cách các tín hiệu được đặt tên.
             ASB
         </td>
         <td>
-            Prefix: D
+            Prefix: <code>D</code>
         </td>
         <td>
         </td>
@@ -188,7 +188,7 @@ Bảng bên dưới mô tả cách các tín hiệu được đặt tên.
             APB
         </td>
         <td>
-            Prefix: P
+            Prefix: <code>P</code>
         </td>
         <td>
             Tín hiệu APB. 
