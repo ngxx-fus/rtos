@@ -133,7 +133,7 @@ Bảng bên dưới mô tả cách các tín hiệu được đặt tên.
             AHB
         </td>
         <td>
-            prefix:<code>H</code>
+            prefix: <code>H</code>
         </td>
         <td>
             Là một tính hiệu AHB
